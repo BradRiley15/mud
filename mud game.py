@@ -8,35 +8,35 @@ import time
 playName = input('What is your name? ')
 
 #Skills
-health = random.randint(10,100)
-mana = random.randint(10,50)
-strength = random.randint(1,10)
-magic = random.randint(1,10)
-marksman = random.randint(1,10)
+playHealth = random.randint(10,100)
+playMana = random.randint(10,50)
+playStrength = random.randint(1,10)
+playMagic = random.randint(1,10)
+playMarksman = random.randint(1,10)
 
 print('Your skills are: ')
-print('Your Health is: ' + str(health))
-print('Your Mana is: ' + str(mana))
-print('Your Strength skill level is: ' + str(strength))
-print('Your Magic skill level is: ' + str(magic))
-print('Your Marksman skill level is: ' + str(marksman))
+print('Your Health is: ' + str(playHealth))
+print('Your Mana is: ' + str(playMana))
+print('Your Strength skill level is: ' + str(playStrength))
+print('Your Magic skill level is: ' + str(playMagic))
+print('Your Marksman skill level is: ' + str(playMarksman))
 
 
 #Reroll skills
 
 skillChange = input('Would you like to re roll these skills? (yes/no): ')
 while skillChange == 'yes':
-    health = random.randint(30,100)
-    mana = random.randint(10,50)
-    strength = random.randint(1,10)
-    magic = random.randint(1,10)
-    marksman = random.randint(1,10)
+    playHealth = random.randint(30,100)
+    playMana = random.randint(10,50)
+    playStrength = random.randint(1,10)
+    playMagic = random.randint(1,10)
+    playMarksman = random.randint(1,10)
     print('Your skills are: ')
-    print('Your Health is: ' + str(health))
-    print('Your Mana is: ' + str(mana))
-    print('Your Strength skill level is: ' + str(strength))
-    print('Your Magic skill level is: ' + str(magic))
-    print('Your Marksman skill level is: ' + str(marksman))
+    print('Your Health is: ' + str(playHealth))
+    print('Your Mana is: ' + str(playMana))
+    print('Your Strength skill level is: ' + str(playStrength))
+    print('Your Magic skill level is: ' + str(playMagic))
+    print('Your Marksman skill level is: ' + str(playMarksman))
     skillChange = input('Would you like to re roll these skills? (yes/no): ')
 
 #Map Logic
@@ -96,18 +96,18 @@ while health > 0:
             while goblinHp > 0:
                 playac = input("What will you attack with? (magic, strength, or marksman? ")
                 if playac == 'magic':
-                    chanHit = random.randint(1,10+magic)
+                    chanHit = random.randint(1,10+playMagic)
                     if chanHit > 11:
-                            damage = random.randint(1,magic)
-                            print('You hit the golin, for' + str(damage) + '!')
-                            goblinHp -= damage
+                            playDamage = random.randint(1,playMagic)
+                            print('You hit the golin, for' + str(playDamage) + '!')
+                            goblinHp -= playDamage
                     if chanHit < 11:
-                            print('YOU MISSED!!!!!')
-                    chanHit = random.randint(1,10+magic)
+                            print('YOU MISSED!')
+                    chanHit = random.randint(1,10+playMagic)
                 if goblinChan > 11:
                     print('The goblin wounded you with its spear, dealing ' + str(goblinAtk) + '.')
                     health -= goblinAtk
-                    print('Careful! You have ' + str(health) + ' health left')
+                    print('Careful! You have ' + str(playHealth) + ' health left')
                 if goblinChan < 11:
                     print('THE GOBLIN MISSED!')
                 goblinAtk = random.randint(5, 15)
