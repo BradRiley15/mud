@@ -25,7 +25,8 @@ print('Your Marksman skill level is: ' + str(playMarksman))
 #Reroll skills
 
 skillChange = input('Would you like to re roll these skills? (yes/no): ')
-while skillChange == 'yes' or skillChange == 'YES' or skillChange == 'Yes' :
+skillChange = skillChange.lower()
+while skillChange == 'yes' :
     playHealth = random.randint(30,100)
     playMana = random.randint(10,50)
     playStrength = random.randint(1,10)
@@ -38,6 +39,7 @@ while skillChange == 'yes' or skillChange == 'YES' or skillChange == 'Yes' :
     print('Your Magic skill level is: ' + str(playMagic))
     print('Your Marksman skill level is: ' + str(playMarksman))
     skillChange = input('Would you like to re roll these skills? (yes/no): ')
+    skillChange = skillChange.lower()
 
 #Map Logic
 
