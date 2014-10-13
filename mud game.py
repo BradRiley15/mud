@@ -66,6 +66,13 @@ staticGoblinHp = 7
 goblinAtk = random.randint(5, 15)
 goblinChan = random.randint(1,19)
 goblinHp = 7
+#Goblin Skills
+#health = random.randint(5,40)
+#mana = random.randint(10,50)
+#strength = random.randint(1,10)
+#magic = random.randint(1,10)
+#marksman = random.randint(1,10)
+
 #start
 
 maxHealth = health
@@ -97,16 +104,16 @@ while health > 0:
                     if chanHit < 11:
                             print('YOU MISSED!!!!!')
                     chanHit = random.randint(1,10+magic)
-                    if goblinChan > 11:
-                        print('The goblin wounded you with its spear, dealing ' + str(goblinAtk) + '.')
-                        health -= goblinAtk
-                        print('Careful! You have ' + str(health) + ' health left')
-                    if goblinChan < 11:
-                        print('THE GOBLIN MISSED!')
-                    goblinAtk = random.randint(5, 15)
-                    goblinChan = random.randint(1,19)
-                    if health < 0:
-                        break
+                if goblinChan > 11:
+                    print('The goblin wounded you with its spear, dealing ' + str(goblinAtk) + '.')
+                    health -= goblinAtk
+                    print('Careful! You have ' + str(health) + ' health left')
+                if goblinChan < 11:
+                    print('THE GOBLIN MISSED!')
+                goblinAtk = random.randint(5, 15)
+                goblinChan = random.randint(1,19)
+                if health < 0:
+                    break
         goblinHp = staticGoblinHp
         xp += 5
         if xp == 20:
