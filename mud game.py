@@ -52,7 +52,7 @@ else:
     genSurr = 'the way goes straight: '
 
 
-#Monster Logic
+# Monster Logic
 
 monChan = 1
 if monChan == 1:
