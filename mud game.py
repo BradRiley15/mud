@@ -25,7 +25,7 @@ print('Your Marksman skill level is: ' + str(playMarksman))
 #Reroll skills
 
 skillChange = input('Would you like to re roll these skills? (yes/no): ')
-while skillChange == 'yes':
+while skillChange == 'yes' or skillChange == 'YES' or skillChange == 'Yes' :
     playHealth = random.randint(30,100)
     playMana = random.randint(10,50)
     playStrength = random.randint(1,10)
