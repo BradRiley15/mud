@@ -55,7 +55,7 @@ else:
 #Monster Logic
 
 monChan = 1
-if monChan ==1:
+if monChan == 1:
     monChan = '...the way is clear...'
 else:
     monChan = 'Oh no theres a goblin! You cant run!'
@@ -75,8 +75,8 @@ goblinHp = 7
 
 #start
 
-maxHealth = health
-maxMana = mana
+maxHealth = playHealth
+maxMana = playMana
 currentLevel = 1
 xp = 0
 
@@ -84,10 +84,10 @@ xp = 0
 start = input('You see a dungeion entrace... do you enter? ')
 if start == 'No':
     print('You fall off a cliff.')
-    health -= maxHealth
+    playHealth -= maxHealth
 
 #While in dungeon
-while health > 0:
+while playHealth > 0:
     go = input('You look ahead, ' + genSurr)
     if go == 'Continue':
         monChan = random.randint(1,2)
@@ -106,13 +106,13 @@ while health > 0:
                     chanHit = random.randint(1,10+playMagic)
                 if goblinChan > 11:
                     print('The goblin wounded you with its spear, dealing ' + str(goblinAtk) + '.')
-                    health -= goblinAtk
+                    playHealth -= goblinAtk
                     print('Careful! You have ' + str(playHealth) + ' health left')
                 if goblinChan < 11:
                     print('THE GOBLIN MISSED!')
                 goblinAtk = random.randint(5, 15)
                 goblinChan = random.randint(1,19)
-                if health < 0:
+                if playHealth < 0:
                     break
         goblinHp = staticGoblinHp
         xp += 5
