@@ -1,4 +1,6 @@
 #This file will be used to store monster stats and if they appear etc.
+import random
+#import "mud/ArmorStats.py"
 
 #Setting Armor Ranges
 noArmor = random.randint(3,5)
@@ -8,8 +10,6 @@ plateArmor = random.randint(12,14)
 PossibleArmor = [noArmor,leatherArmor,chainArmor,plateArmor]
 
 #Goblin | Level 1
-import random
-#import "mud/ArmorStats.py"
 
 #Setting Goblins Health, Speed, Stamina, Dexterity, Strength
 goblinHealth = random.randint(7,14)
