@@ -3,6 +3,7 @@
 
 import random
 import time
+import monsters
 
 #Player name
 playName = input('What is your name? ')
@@ -96,16 +97,34 @@ while playHealth > 0:
         if monChan == 2:
             print('Oh no! there is a Goblin! You cannot run!')
             while goblinHp > 0:
-                playac = input("What will you attack with? (magic, strength, or marksman? ")
+                playac = input("What will you attack with? (magic, strength, or marksman? )")
                 if playac == 'magic':
                     chanHit = random.randint(1,10+playMagic)
                     if chanHit > 11:
-                            playDamage = random.randint(1,playMagic)
-                            print('You hit the golin, for' + str(playDamage) + '!')
-                            goblinHp -= playDamage
-                    if chanHit < 11:
-                            print('YOU MISSED!')
+                        playDamage = random.randint(1,playMagic)
+                        print('You casted a magic missle hitting the golin, for ' + str(playDamage) + '!')
+                        goblinHp -= playDamage
+                    elif chanHit < 11:
+                        print('YOU MISSED!')
                     chanHit = random.randint(1,10+playMagic)
+                if playac == 'strength':
+                    chanHit = random.randint(1,10+playStrength)
+                    if chanHit > 11:
+                        playDamage = random.randint(1,playStrength)
+                        print('You swung your sword at the goblin hitting the golin, for ' + str(playDamage) + '!')
+                        goblinHp -= playDamage
+                    elif chanHit < 11:
+                        print('YOU MISSED!')
+                    chanHit = random.randint(1,10+playStrength)
+                if playac == 'marksman':
+                    chanHit = random.randint(1,10+playMarksman)
+                    if chanHit > 11:
+                        playDamage = random.randint(1,playMarksman)
+                        print('You shot an arrow at the goblin, for ' + str(playDamage) + '!')
+                        goblinHp -= playDamage
+                    elif chanHit < 11:
+                        print('YOU MISSED!')
+                    chanHit = random.randint(1,10+playMarksman)
                 if goblinChan > 11:
                     print('The goblin wounded you with its spear, dealing ' + str(goblinAtk) + '.')
                     playHealth -= goblinAtk
@@ -121,6 +140,7 @@ while playHealth > 0:
         if xp == 20:
             print('Congragulations you leveled up!')
             currentLevel += 1
+            #skillup = input('Enter a skill to level up! ')
         if monChan == 1:
             print('The way is clear....for now...')
             ############Where I am at
