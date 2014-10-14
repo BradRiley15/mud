@@ -9,7 +9,7 @@ PossibleArmor = [noArmor,leatherArmor,chainArmor,plateArmor]
 
 #Goblin | Level 1
 import random
-import "mud/ArmorStats.py"
+#import "mud/ArmorStats.py"
 
 #Setting Goblins Health, Speed, Stamina, Dexterity, Strength
 goblinHealth = random.randint(7,14)
@@ -30,4 +30,6 @@ if goblinDexterity > 17 :
   
 #Possible Hit Buff
 if goblinDexterity > 13 :
-  goblinHitbuff = goblinHitchance + 
+  goblinHitbuff = 3
+  
+print("Goblin Stats: \n------------\nHealth: " + goblinHealth + "\nSpeed: " + goblinSpeed + "\nStamina: " + goblinStamina + "\nDexterity: " + goblinDexterity + "\nStrength: " + goblinStrength + "\nArmor: " + goblinArmor)
