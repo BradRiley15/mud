@@ -3,33 +3,36 @@
 import random
 #import "mud/ArmorStats.py"
 
-#Setting Armor Ranges
-noArmor = random.randint(3,5)
-leatherArmor = random.randint(6,8)
-chainArmor = random.randint(9,11)
-plateArmor = random.randint(12,14)
-PossibleArmor = [noArmor,leatherArmor,chainArmor,plateArmor]
+#Setting Armor Stats
+noArmor = 6
+clothArmor = 8
+leatherArmor = 10
+chainArmor = 12
+plateArmor = 14
+PossibleArmor = [noArmor,clothArmor,leatherArmor,chainArmor,plateArmor]
 
 #Goblin | Level 1
 
 #Setting Goblins Health, Speed, Stamina, Dexterity, Strength
 goblinHealth = random.randint(7,14)
 goblinSpeed = random.randint(3,7)
-goblinStamina = 20
 goblinDexterity = random.randint(3,18)
 goblinStrength = random.randint(3,19)
 
 #Setting Goblins Armor
 goblinArmor = random.choice(PossibleArmor)
 #Setting Goblin Armor Type
-if goblinArmor < 6 :
+if goblinArmor = 6 :
   goblinArmortype = "None"
-elif 6 <= goblinArmor <= 8 :
+elif goblinArmor = 8 :
+  goblinArmortype = "Cloth"
+elif goblinArmor = 10 :
   goblinArmortype = "Leather"
-elif 9 <= goblinArmor <= 11 :
-  goblinArmortype = "Chain Mail"
-elif 12 <= goblinArmor <= 14 :
-  goblinArmortype = "Plate"
+elif goblinArmor = 12 :
+  goblinArmortype = "Chain"
+elif goblinArmor = 14 : 
+  goblinArmortype = "Plate" 
+
 #Possible Armor Buffs
 if goblinDexterity > 13 :
   goblinArmor = goblinArmor + 1
