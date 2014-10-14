@@ -1,0 +1,21 @@
+#Armor
+"""
+- No Armor
+  - Armor Range 3-5
+- Leather Armor
+  - Armor Range 6-8
+- Chain Mail Armor
+  - Armor Range 9-11
+- Plate Armor
+  - Armor Range 12-14
+  
+if Dexterity > 13 then Armor = + 1
+if Dexterity > 15 then Armor = + 2
+if Dexterity > 17 then Armer = + 3
+"""
+import random
+
+#No Armor
+noArmor = random.randint(3,5)
+
+#Leather
