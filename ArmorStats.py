@@ -19,3 +19,12 @@ import random
 noArmor = random.randint(3,5)
 
 #Leather
+leatherArmor = random.randint(6,8)
+
+#Chain Mail Armor
+chainmailArmor = random.randint(9,11)
+
+#Plate Armor
+plateArmor = random.randint(12,14)
+
+
