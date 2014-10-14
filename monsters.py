@@ -47,4 +47,4 @@ if goblinDexterity > 13 :
 print("|=============|")
 print("| For Testing |")
 print("|=============|")
-print("Goblin Stats: \n------------\nHealth: " + str(goblinHealth) + "\nSpeed: " + str(goblinSpeed) + "\nStamina: " + str(goblinStamina) + "\nDexterity: " + str(goblinDexterity) + "\nStrength: " + str(goblinStrength) + "\nArmor: " + str(goblinArmor) + " (" + str(goblinArmortype) + ") ")
+print("Goblin Stats: \n------------\n Health: " + str(goblinHealth) + "\n Speed: " + str(goblinSpeed) + "\n Stamina: " + str(goblinStamina) + "\n Dexterity: " + str(goblinDexterity) + "\n Strength: " + str(goblinStrength) + "\n Armor: " + str(goblinArmor) + " (" + str(goblinArmortype) + ") ")
