@@ -20,9 +20,15 @@ goblinStrength = random.randint(3,19)
 
 #Setting Goblins Armor
 goblinArmor = random.choice(PossibleArmor)
+#Setting Goblin Armor Type
 if goblinArmor < 6 :
   goblinArmortype = "None"
-
+elif 6 <= goblinArmor <= 8 :
+  goblinArmortype = "Leather"
+elif 9 <= goblinArmor <= 11 :
+  goblinArmortype = "Chain Mail"
+elif 12 <= goblinArmor <= 14 :
+  goblinArmortype = "Plate"
 #Possible Armor Buffs
 if goblinDexterity > 13 :
   goblinArmor = goblinArmor + 1
@@ -34,5 +40,10 @@ if goblinDexterity > 17 :
 #Possible Hit Buff
 if goblinDexterity > 13 :
   goblinHitbuff = 3
-  
-print("Goblin Stats: \n------------\nHealth: " + str(goblinHealth) + "\nSpeed: " + str(goblinSpeed) + "\nStamina: " + str(goblinStamina) + "\nDexterity: " + str(goblinDexterity) + "\nStrength: " + str(goblinStrength) + "\nArmor: " + str(goblinArmor))
+
+#Print Goblin Stats (For Testing)
+
+print("|=============|")
+print("| For Testing |")
+print("|=============|")
+print("Goblin Stats: \n------------\nHealth: " + str(goblinHealth) + "\nSpeed: " + str(goblinSpeed) + "\nStamina: " + str(goblinStamina) + "\nDexterity: " + str(goblinDexterity) + "\nStrength: " + str(goblinStrength) + "\nArmor: " + str(goblinArmor) + " : " + str(goblinArmortype))
