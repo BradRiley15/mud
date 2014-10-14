@@ -32,4 +32,4 @@ if goblinDexterity > 17 :
 if goblinDexterity > 13 :
   goblinHitbuff = 3
   
-print("Goblin Stats: \n------------\nHealth: " + goblinHealth + "\nSpeed: " + goblinSpeed + "\nStamina: " + goblinStamina + "\nDexterity: " + goblinDexterity + "\nStrength: " + goblinStrength + "\nArmor: " + goblinArmor)
+print("Goblin Stats: \n------------\nHealth: " + str(goblinHealth) + "\nSpeed: " + str(goblinSpeed) + "\nStamina: " + str(goblinStamina) + "\nDexterity: " + str(goblinDexterity) + "\nStrength: " + str(goblinStrength) + "\nArmor: " + str(goblinArmor))
