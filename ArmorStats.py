@@ -27,4 +27,15 @@ chainmailArmor = random.randint(9,11)
 #Plate Armor
 plateArmor = random.randint(12,14)
 
+#Function to run armor
+"""
+playArmor = 0
+def Armor():
+  if playDex > 13:
+    playArmor += 1
+  if playDex > 15:
+    playArmor +=2
+  if playDex > 17:
+    playArmor +=3
 
+"""
