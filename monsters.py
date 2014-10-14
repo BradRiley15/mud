@@ -20,6 +20,9 @@ goblinStrength = random.randint(3,19)
 
 #Setting Goblins Armor
 goblinArmor = random.choice(PossibleArmor)
+if goblinArmor < 6 :
+  goblinArmortype = "None"
+
 #Possible Armor Buffs
 if goblinDexterity > 13 :
   goblinArmor = goblinArmor + 1
