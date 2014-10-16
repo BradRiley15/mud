@@ -3,11 +3,13 @@
 
 def combatEncounter():
   #Setting Function Variables
+    #Combat Turn Variables
   outOfCombat = "noCombat"
   playerTurn = "playerTurn"
   enemyTurn = "enemy1Turn"
-  playerCombatTurn = "-"
-  player_Suicide = "-"
+    #Player Turn Variables
+  playerCombatTurn = "--"
+  player_Suicide = "--"
   valid_CombatTurn = False
   
   #Import Global Variables
@@ -47,21 +49,26 @@ def combatEncounter():
           print("You can only (A)ttack, (R)un, (T)alk, (S)uicide, or do (N)othing. ")
           playerCombatTurn = input("Choice: ")[0].upper()
       #If Player Chooses To Commit Suicide
-      if playerCombatTurn == "S" :
+      while playerCombatTurn == "S" :
         print("\nYou draw your sword, holding it with the point of it's blade pressed against your chest. ")
         player_Suicide = input("Are you sure? (Y/N): ")[0].upper()
         #Confirming if player really wants to commit suicide
         if player_Suicide == "Y" :
-          print("You take your readied sword and plunge it deep into your chest, killing you almost instantly. ")
+          print(\n"You take your readied sword and plunge it deep into your chest, killing you almost instantly. ")
           playerHealth = 0
           valid_CombatTurn = False
-          playerCombatTurn = "-"
+          playerCombatTurn = "--"
+          player_Suicide = "--"
           break
         elif player_Suicide == "N" :
-          print("You lower your sword, deciding not to kill yourself. ")
+          print("\nYou lower your sword, deciding not to kill yourself. ")
           valid_CombatTurn = False
-          playerCombatTurn = "-"
-        elif player_Suicide !="Y"
+          playerCombatTurn = "--"
+          player_Suicide = "--"
+        elif player_Suicide !="Y" or player_Suicide !="N" or player_Suicide !="--"
+          print("\nThat is not a valid option. ")
+          player_Suicide = input("Commit Suicide? (Y/N): ")[0].upper()
+          
 
 #If Player Dies
 while playerHealth <= 0 :
